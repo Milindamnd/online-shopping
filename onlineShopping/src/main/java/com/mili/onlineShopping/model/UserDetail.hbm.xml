@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+  "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+  "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.mili.onlineShopping.model">
+
+	<class name="UserDetail" table="USER_DETAIL">
+		<id name="userId" type="java.lang.Integer" column="USER_ID">
+			<generator class="identity" />
+		</id>
+		<property name="fName" type="string" column="FIRST_NAME"/>
+		<property name="lName" type="string" column="LAST_NAME"/>
+		<property name="role" type="string" column="ROLE"/>
+		<property name="enable" type="boolean" column="ENABLE"/>
+		<property name="password" type="string" column="PASSWORD"/>
+		<property name="contactNumber" type="int" column="CONTACT_NUMBER"/>
+         <set name="products" inverse="true">
+            <key column="PRODUCT_ID"/>
+            <one-to-many class="Product"/>
+        </set>
+	</class>
+</hibernate-mapping>
