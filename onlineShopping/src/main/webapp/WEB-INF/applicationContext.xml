@@ -8,7 +8,12 @@
  
     <!-- Specifying base package of the Components like Controller, Service,
         DAO -->
+    
+    <context:annotation-config />
     <context:component-scan base-package="com.mili" />
+    
+    <tx:annotation-driven transaction-manager="transactionManager" />
+    
  
     <!-- Getting Database properties -->
     <context:property-placeholder location="classpath:application.properties" />
@@ -18,7 +23,8 @@
     <!-- Specifying the Resource location to load JS, CSS, Images etc -->
     <mvc:resources location="/files/" mapping="/resources/**"></mvc:resources>
  
-    
+ 
+  
  
     <!-- DataSource -->
     <bean class="org.springframework.jdbc.datasource.DriverManagerDataSource"
@@ -58,5 +64,5 @@
         <property name="sessionFactory" ref="sessionFactory" />
     </bean>
  
-    <tx:annotation-driven transaction-manager="transactionManager" />
+    
 </beans>

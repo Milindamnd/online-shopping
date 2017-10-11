@@ -16,9 +16,11 @@
 		<property name="enable" type="boolean" column="ENABLE"/>
 		<property name="password" type="string" column="PASSWORD"/>
 		<property name="contactNumber" type="int" column="CONTACT_NUMBER"/>
-         <set name="products" inverse="true">
-            <key column="PRODUCT_ID"/>
-            <one-to-many class="Product"/>
+        <set name="products" table="product" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="USER_ID" />
+            </key>
+            <one-to-many class="Product" />
         </set>
 	</class>
 </hibernate-mapping>

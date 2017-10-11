@@ -16,5 +16,12 @@ public class HomeController {
 		return mv;
 		
 	}
+	public ModelAndView category() {
+		ModelAndView mv=new ModelAndView("page");
+		mv.addObject("title","category");
+		mv.addObject("onClickCategory",true);
+		return mv;
+		
+	}
 	
 }

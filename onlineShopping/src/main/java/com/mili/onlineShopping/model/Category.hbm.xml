@@ -14,9 +14,11 @@
 		<property name="description" type="string" column="DESCRIPTION"/>
 		<property name="image_url" type="string" column="IMAGE_URL"/>
 		<property name="is_active" type="boolean" column="IS_ACTIVE"/>
-         <set name="products" inverse="true">
-            <key column="PRODUCT_ID"/>
-            <one-to-many class="Product"/>
+         <set name="products" table="product" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="CATEGORY_ID" />
+            </key>
+            <one-to-many class="Product" />
         </set>
 	</class>
 </hibernate-mapping>

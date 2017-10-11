@@ -26,6 +26,9 @@
             <li class="nav-item" id="manageProduct">
               <a class="nav-link" href="${pageContext.servletContext.contextPath}/manage/products">Manage Products</a>
             </li>
+            <li class="nav-item" id="addCategory">
+              <a class="nav-link" href="${pageContext.servletContext.contextPath}/manageCategory/category">Add Category</a>
+            </li>
            
           </ul>
         </div>

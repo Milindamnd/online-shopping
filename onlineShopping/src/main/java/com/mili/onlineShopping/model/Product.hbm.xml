@@ -11,12 +11,15 @@
 			<generator class="identity" />
 		</id>
 		<property name="code" type="string" column="CODE"/>
+		<property name="name" type="string" column="NAME"/>
 		<property name="brand" type="string" column="BRAND"/>
 		<property name="description" type="string" column="DESCRIPTION"/>
 		<property name="unitPrice" type="double" column="UNIT_PRICE"/>
 		<property name="qty" type="java.lang.Integer" column="QTY"/>
 		<property name="active" type="boolean" column="IS_ACTIVE"/>
-		<many-to-one name="category" column="CATEGORY_ID" unique="false"/>
-		<many-to-one name="userDetail" column="USER_ID" unique="false"/>
+		<property name="category_id" type="java.lang.Integer" column="CATEGORY_ID"/>
+		<property name="supplier_id" type="java.lang.Integer" column="USER_ID"/>
+		<property name="purchases" type="java.lang.Integer" column="PURCHASES"/>
+		<property name="views" type="java.lang.Integer" column="VIEWS"/>
 	</class>
 </hibernate-mapping>
