@@ -36,7 +36,7 @@ public class ManageController {
 	public ModelAndView manageProduct(@RequestParam(name="operation",required=false)String operation) {
 		ModelAndView mv=new ModelAndView("page");
 		mv.addObject("onClickManageProduct",true);
-		mv.addObject("title","Manage Product");
+		mv.addObject("title","Manage Products");
 		Product nProduct=new Product();
 		nProduct.setSupplier_id(1);
 		nProduct.setActive(true);

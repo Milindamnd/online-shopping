@@ -31,4 +31,9 @@ public class CategoryServiceImpl implements CategoryService {
 		
 	}
 
+	@Override
+	public Category get(int id) {
+		return categoryDao.get(id);
+	}
+
 }

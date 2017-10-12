@@ -1,5 +1,8 @@
 package com.mili.onlineShopping.service.impl;
 
+import java.util.List;
+
+import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,6 +18,11 @@ public class ProductServiceImpl implements ProductService {
 	public void addProduct(Product product) {
 		productDao.addProduct(product);
 
+	}
+	@Override
+	public List<Product> getListOfAllProduct() {
+		return productDao.getListOfAllProduct();
+	
 	}
 
 }

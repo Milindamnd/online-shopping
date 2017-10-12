@@ -8,6 +8,8 @@ import javax.validation.constraints.Min;
 import org.hibernate.validator.constraints.NotBlank;
 import org.springframework.web.multipart.MultipartFile;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 public class Product{
 
 	private int productId;
@@ -17,13 +19,17 @@ public class Product{
 	@NotBlank(message="Please Enter Product Brand")
 	private String brand;
 	@NotBlank(message="Please Enter Description about Your Product")
+	@JsonIgnore
 	private String description;
 	@Min(value=1,message="Price Cannot be less than 1 ")
 	private double unitPrice;
 	@Min(value=1,message="Quantity Cannot be less than 1 ")
 	private int qty;
+	@JsonIgnore
 	private boolean active;
+	@JsonIgnore
 	private int category_id;
+	@JsonIgnore
 	private int supplier_id;
 	private int purchases;
 	private int views;

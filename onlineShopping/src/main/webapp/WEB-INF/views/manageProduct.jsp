@@ -92,7 +92,7 @@
 								image </label>
 							<div class="col-md-8">
 								<sf:input type="file" path="image_file" id="image_file"
-									class="form-control" />
+									 size="1"/>
 							</div>
 						</div>
 

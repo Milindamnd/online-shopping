@@ -22,11 +22,13 @@
 
 <script>
 	window.menu = '${title}';
+	window.contextRoot='${pageContext.servletContext.contextPath}'
 </script>
 
 <!-- Bootstrap core CSS -->
 <link href="${css}/bootstrap.min.css" rel="stylesheet">
-
+<!-- Bootstrap dataTable -->
+<link href="${css}/dataTables.bootstrap.css" rel="stylesheet">
 <!-- Bootstrap theme CSS -->
 <link href="${css}/boostrap-theme.css" rel="stylesheet">
 
@@ -52,7 +54,7 @@
 			</c:if>
 
 			<c:if test="${onClickAllProduct == true or onClickCategoryProduct == true}">
-				<%@include file="product.jsp"%>
+				<%@include file="listProduct.jsp"%>
 			</c:if>
 
 			<c:if test="${onClickContact==true}">
@@ -71,10 +73,13 @@
 		<!-- Footer -->
 		<%@include file="./share/Footer.jsp"%>
 		<!-- Bootstrap core JavaScript -->
+		<script src="${js}/myApp.js"></script>
 		<script src="${js}/jquery.js"></script>
+		<script src="${js}/jquery.dataTables.js"></script>
+		<script src="${js}/dataTables.bootstrap.js"></script>
 		<script src="${js}/popper.js"></script>
 		<script src="${js}/bootstrap.min.js"></script>
-		<script src="${js}/myApp.js"></script>
+		
 
 	</div>
 </body>
